@@ -15,6 +15,7 @@ Packages used:
 3. Numpy 1.20.2
 4. Plotly 4.14.3
 5. Scikit-Learn 0.24.1
+6. Scipy 1.6.2
 
 Datasets used in the analysis are included in this repo, for convenience ("data" directory). Data are simulated, and files are quite small.
 
