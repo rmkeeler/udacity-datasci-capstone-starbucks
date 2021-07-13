@@ -36,9 +36,23 @@ Secondarily, my motivation was to answer the business question I came up with af
 
 ## File Descriptions <a name="files"></a>
 
+- Starbucks_Capstone_notebook.ipynb: The principal file in this repo. It is the report that documents my process, my results and what I believe are their implications.
+- binomial.py: A custom class I wrote that allowed me to evaluate my results for significance very quickly.
+- portfolio.json: A small dataset describing each offer in Starbucks's promotional repertoire.
+- profile.json: Dataset of Starbucks's user base, described by gender, age, income and the date they became a member.
+- transcript.json: Dataset of all transactions taking place among users during the simulated experiment's time frame. Events recorded include offer receipts, offer views, offer completions and monetary transactions.
 
 ## Results<a name="results"></a>
+Results are described in detail in the "Project Summary" section of the Jupyter notebook.
 
+In preview, this analysis aggregated Starbucks users into 5 clusters:
+1. Low Earners
+2. High Earners
+3. Male Middle Earners
+4. Female Middle Earners
+5. The Unknowns
+
+It then found that most groups prefer Starbucks's discount promo offer, while the unknowns don't respond to either.
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
