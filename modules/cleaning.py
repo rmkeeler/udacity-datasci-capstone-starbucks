@@ -35,6 +35,25 @@ def clean_users(users_df):
 
     return clean_users
 
+def clean_users_numeric(users_df):
+    """
+    Takes the user dataframe and cleans it according to the steps determined during exploration.
+
+    1. Leave NaN income and convert null codes in gender and age to NaN
+    2. Remove all NaN rows from the dataset
+    """
+
+    # Replace NaN codes in gender with "unknown" and drop gender "O"
+    users_df.loc[users_df['gender'].isnull(), 'gender'] = np.nan
+    users_df = users_df.loc[users_df['gender'] != 'O']
+
+    users_df.loc[users_df['age'] == 118, 'age'] = np.nan
+
+    # Drop income, became_member_on and age columns
+    clean_users = users_df.loc[~users_df.income.isnull()].copy()
+
+    return clean_users
+
 def clean_transactions(trans_df, offer_df, users_df):
     """
     Takes the transactions dataframe and cleans it. Turns it into a multi-outcome array that plays
